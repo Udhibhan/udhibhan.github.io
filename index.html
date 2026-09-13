@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Udhi — Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <span class="logo">Udhi</span>
+      <button class="menu" aria-label="Toggle menu">☰</button>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section id="hero">
+      <h1>Udhi</h1>
+      <p>Electrical Engineering undergrad. I build control systems and embedded hardware.</p>
+      <div class="buttons">
+        <a class="btn primary" href="#projects">See projects</a>
+        <a class="btn" href="#contact">Get in touch</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        Second-year EE student, currently working on quantum control systems and
+        satellite ground station hardware. I like projects where the electronics,
+        firmware, and control software all have to work together.
+      </p>
+      <ul class="skills">
+        <li>Python</li>
+        <li>C++</li>
+        <li>KiCad</li>
+        <li>CAN bus</li>
+        <li>STM32</li>
+        <li>Control systems</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+        <article class="card">
+          <h3>Satellite Ground Station Tracker</h3>
+          <p>
+            The existing AZ/EL tracker codebase was tied to old motion controller
+            hardware and hard to extend. I'm rebuilding it around a hardware
+            abstraction layer so the actuator backend can be swapped, driving new
+            eRob actuators over CANopen. Python, CANopen, TLE-based pass scheduling.
+          </p>
+          <a href="#">Code (link me)</a>
+        </article>
+
+        <article class="card">
+          <h3>Quantum Control Crate Debugging</h3>
+          <p>
+            Worked on a Sinara/ARTIQ quantum control crate at Atomionics —
+            tracing RTIO timing collisions across a Kasli, Urukul DDS, and Zotino
+            DAC, and getting the full software pipeline running end to end without
+            touching persistent device config. ARTIQ, RTIO, embedded timing.
+          </p>
+          <a href="#">Code (link me)</a>
+        </article>
+
+        <article class="card">
+          <h3>CAN Bus Thermocouple Monitoring</h3>
+          <p>
+            Built a multi-node monitoring system that reads thermocouple data over
+            CAN from several STM32 nodes and logs it on a Raspberry Pi, with
+            DIP-switch-based node addressing so nodes can be added without
+            reflashing IDs. MCP9604, STM32, CAN bus.
+          </p>
+          <a href="#">Code (link me)</a>
+        </article>
+      </div>
+    </section>
+
+    <footer id="contact">
+      <h2>Contact</h2>
+      <p>
+        <a href="mailto:your.email@example.com">your.email@example.com</a>
+        &nbsp;·&nbsp;
+        <a href="https://github.com/yourusername">GitHub</a>
+        &nbsp;·&nbsp;
+        <a href="https://linkedin.com/in/yourusername">LinkedIn</a>
+      </p>
+      <p class="fineprint">© <span id="year"></span> Udhi</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
